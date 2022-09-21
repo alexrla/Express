@@ -79,7 +79,13 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
+### Parâmetros
+
+- **Podemos resgatar os parâmetros que vêm da URL, através do `req`;**
+  - **Acessamos: `req.params.nome_do_parâmetro`;**
+  - **O nome do parâmetro é definido  na URL do express, por exemplo: `/users/:id` (o nome da rota é _users_ e o nome do parâmetro é _id_ , que é precedido por dois-pontos) ;**
 
 
 
+### 
 
