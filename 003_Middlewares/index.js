@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from 'url';
-import { isGeneratorFunction } from "util/types";
 
 const app = express();
 
