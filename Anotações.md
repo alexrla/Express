@@ -37,3 +37,12 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
+### Renderizando HTML com express
+
+- **Para enviar HTML como resposta, utilizamos o método `sendFile` (isso faz com que o arquivo seja renderizado no navegador, o arquivo é enviado como resposta);**
+  - **Precisaremos acessar o arquivo por meio do diretório base (isso requer o uso do módulo `path`);**
+
+
+
+
+

@@ -5,7 +5,7 @@ import express from "express";
 const app = express();
 
 // Definindo porta
-const port = 3000 // Variável ambiente
+const port = 3000; // Variável ambiente
 
 // Criando primeira rota
 app.get("/", (req, res) => {
