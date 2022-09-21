@@ -87,5 +87,11 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
-### 
+### POST
 
+- **Para enviar dados, devemos criar uma rota com o verbo POST (ela que receberá os dados enviados);**
+  - **No express, precisaremos colocar alguns middlewares como o `express.json`, para ler os dados do body;**
+
+
+
+### 
