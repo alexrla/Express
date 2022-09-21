@@ -44,5 +44,42 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
+### Nodemon
+
+- **Sempre que atualizamos o nosso projeto, é necessário reiniciarmos o nosso servidor;**
+
+- **Porém, podemos utilizar o pacote `Nodemon`, que a cada vez que atualizamos e salvamos o nosso projeto, ele reinicia o nosso servidor de forma automática;**
+
+  - **Devemos salvar esse pacote como uma dependência de desenvolvimento (utilizamos: `--save-dev` ou `-D`);**
+
+    ```shell
+    npm i nodemon --save-dev 
+    
+    Ou
+    
+    npm i nodemon -D
+    ```
+
+- **No arquivo `package.json`, podemos criar o seguinte script:**
+
+  ```javascript
+  "scripts": {
+      "start": "nodemon index.js"
+  }
+  
+  // O arquivo index.js deve estar no mesmo nível que o arquivo package.json
+  ```
+
+
+
+### Middlewares
+
+- **Códigos que podem ser executados no meio/entre (middle), alguma ação e outra;**
+- **O método que nos dá acesso a utilização de middlewares, é o método `use`, do `express`;**
+
+
+
+
+
 
 
