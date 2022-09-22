@@ -100,3 +100,17 @@ app.get("/nome_da_rota", (request, response) => {
 - **Normalmente, é criado uma pasta ou arquivo, contendo essas rotas (que representam uma entidade comum, como por exemplo, `users`);**
 - **Nessa situação iremos utilizar um objeto chamado `Router`, e as rotas serão colocadas nele;**
   - **Em seguida, exportamos e importamos no arquivo principal;**
+
+
+
+### Inserindo CSS com o express
+
+- **Para inserir CSS nas páginas e arquivos estáticos, temos de criar um middleware;**
+  - **O `express.static`;**
+- **Teremos também de criar um diretório base;**
+  - **Normalmente, é o diretório de nome `public`;**
+  - **E a partir desta pasta, criamos os arquivos estáticos;**
+  - **E no HTML, podemos acessar o caminho relativo após a pasta definida;**
+
+
+
