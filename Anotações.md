@@ -114,3 +114,9 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
+### Página 404
+
+- **Para criar uma página 404 (quando o usuário acessa uma página que não existe), temos de criar um middleware abaixo de todas as rotas, que responde a este status e enviar um arquivo de template referente a esta página;**
+
+
+
