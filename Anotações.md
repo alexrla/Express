@@ -94,4 +94,9 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
-### 
+### Módulo de rotas
+
+- **Podemos unir  várias rotas em um módulo (o que deixa o nosso código mais organizado);**
+- **Normalmente, é criado uma pasta ou arquivo, contendo essas rotas (que representam uma entidade comum, como por exemplo, `users`);**
+- **Nessa situação iremos utilizar um objeto chamado `Router`, e as rotas serão colocadas nele;**
+  - **Em seguida, exportamos e importamos no arquivo principal;**
