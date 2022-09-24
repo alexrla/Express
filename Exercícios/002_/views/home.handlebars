@@ -1,0 +1,10 @@
+<h1>Nossos cursos</h1>
+
+{{#each courses}}
+    <div>
+        <h3>{{this.name}}</h3>
+        <p>Preço: R$ {{this.price}},00</p>
+        {{!-- Recurso de URL dinâmica --}}
+        <a href="/course/{{this.id}}">Comprar</a>
+    </div>
+{{/each}}

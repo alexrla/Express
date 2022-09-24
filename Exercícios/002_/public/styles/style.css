@@ -1,0 +1,45 @@
+body {
+    align-items: center;
+
+    background-color: #35353F;
+
+    display: flex;
+
+    flex-direction: column;
+    
+    justify-content: center;
+    
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+div {
+    border: 2px solid #FFFFFF;
+
+    margin: 20px;
+
+    padding: 10px;
+
+    width: 200px;
+}
+
+h3, h2 {
+    color: #7C5EA7;
+}
+
+p {
+    color: #BCC4D7;
+}
+
+a {
+    color: #FFFFFF;
+
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
