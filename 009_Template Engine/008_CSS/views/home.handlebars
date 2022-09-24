@@ -1,0 +1,16 @@
+<h1>Home</h1>
+{{#if auth}}
+    <p>
+        Login realizado com sucesso, <a href="/dashboard">clique aqui</a> para acessar o dashboard!
+    </p>
+    <p>
+        Ou <a href="/post">clique aqui</a> para acessar o nosso blog!
+    </p>
+    <p>
+        Ou por último, acesse diretamente, <a href="/blog">clicando aqui</a>, os nosso posts!
+    </p>
+{{else}}
+    <p>
+        Faça login para entrar!
+    </p>
+{{/if}}

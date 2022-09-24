@@ -120,3 +120,103 @@ app.get("/nome_da_rota", (request, response) => {
 
 
 
+### Template Engine
+
+- **Forma de deixar o HTML dinâmico, inserindo variáveis do back-end no front-end;**
+  - **Também podemos criar _layouts_ que serão reaproveitáveis;**
+- **Essencial para projetos que usam banco de dados que não são estáticos;**
+- **Existem diversas opções: `EJS`, `Pug` e `Handlebars`, por exemplo (todos atingem o mesmo objetivos, mas possuem algumas diferenças de setup e de funcionalidades);**
+
+
+
+#### Handlebars
+
+- **Uma das templates engines mais utilizadas;**
+  - **Conhecida pela sua sintaxe limpa no front e nos força a não executar lógica no HTML;**
+  - **Nome do pacote: `express-handlebars`;**
+- **Colocamos os dados dinâmicos no HTML entre `{{ }}`, para serem "impressos";**
+- **Podemos criar condicionais e loops, no template;**
+- **Para trabalhar com o `Handlebars`, precisaremos, além do pacotes que já utilizamos como o `Express` e o `Nodemon`, precisaremos instalar o pacote do `Handlebars` e no arquivo `index.js`, importamos os pacotes instalados, adicionamos ao `Express`, a `engine` do `Handlebars`, criamos uma `view` no diretório de _views_, com a extensão `.handlebars` e utilizamos o método `render`, para enviar esta view a requisição;**
+- **Comando utilizado para a instalação: `npm i express-handlebars`;**
+
+
+
+##### Layouts
+
+- **Podemos criar _layouts_ para reaproveitar código entre páginas (vamos criar uma pasta chamada layouts em views e nela iremos criar o template que será repetido);**
+  - **Utilizaremos a tag `{{{ body }}}`, para que nesse local, o "corpo" do site seja inserido (agora em todas as nossas views, o layout será repetido);**
+
+
+
+##### Passando dados para a view
+
+- **Os dados são passados por meio do método `render` (enviamos um objeto com chaves e valores e isso nos possibilita o acesso destes dados, no template);**
+
+- **Sintaxe:**
+
+  **`{{ dado }}`**
+
+
+
+##### Condicionais
+
+- **Podemos utilizar o `if` no Handlebars. Sintaxe:**
+
+  ```handlebars
+  {{#if condição}} conteúdo... {{ /if }}
+  ```
+
+  **Se a condição for verdadeira, o conteúdo será "impresso" (precisaremos encaminhar o dado a ser validade, pelo back-end);**
+
+- **Ainda temos o `else` (complemento do `if`), que é utilizado para exibir a outra parte do layout, caso a condição seja falsa. Sintaxe:**
+
+  ```handlebars
+  {{#if condição}} conteúdo do if... {{else}} conteúdo do else... {{ /if }}
+  ```
+
+  
+
+##### Estrutura de repetição
+
+- **Realizadas através do operador `each`;**
+
+  - **Sintaxe:**
+
+    ```handlebars
+    {{#each}} ...{{/each}}
+    ```
+
+- **Em um array (uma lista com itens), podemos chamar os itens como: `{{this}}`  (elemento atual da lista);**
+  - **Então, cada um dos itens é acessado na view;**
+
+
+
+##### with
+
+- **Nos permite abstrair um objeto (podemos acessar propriedades sem nos referenciarmos sempre, ao objeto antes);**
+
+  - **Sintaxe:**
+
+    ```handlebars
+    {{#with objeto}} ...{{/with}}
+    ```
+
+
+
+##### partials
+
+- **Sâo como "mini templates", que precisam ser repetidos em diversos locais da nossa aplicação (é necessário realizarmos algumas modificações na implementação do Handlebars);**
+
+  - **Geralmente ficam em `views/partials` e utilizamos a sintaxe (para chamá-lo no projeto):**
+
+    ```handlebars
+    {{>partial}}
+    ```
+
+    
+
+##### CSS com Handlebars
+
+- **Semelhante a inclusão de CSS, feita com o express;**
+  - **Precisaremos definir a pasta dos arquivos estáticos;**
+  - **E vamos linkar o CSS com o nosso layout, em comum para todas as páginas;**

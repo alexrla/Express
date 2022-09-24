@@ -1,0 +1,10 @@
+<p>Seja bem-vindo, {{ user.name }} {{ user.surname }}!</p>
+<h1>Dashboard</h1>
+
+<ul>
+    {{#each items}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+
+<a href="/">Voltar</a>
